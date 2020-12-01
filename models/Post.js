@@ -1,10 +1,10 @@
-const { model, schema, Schema } = require('mongoose')
+const { model, Schema } = require('mongoose')
 
 const postSchema = new Schema({
     body: String,
     username: String,
     createdAt: String,
-    comments: [ 
+    comments: [
         {
             body: String,
             username: String,
@@ -14,8 +14,7 @@ const postSchema = new Schema({
     likes: [
         {
             username: String,
-            createdAt: String,
-
+            createdAt: String
         }
     ],
     user: {
