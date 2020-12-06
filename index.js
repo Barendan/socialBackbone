@@ -8,7 +8,7 @@ const { MONGODB } = require('./config.js')
 const pubsub = new PubSub()
 
 const server = new ApolloServer({
-    typeDefs, //  
+    typeDefs, // model of the data
     resolvers, // processes logic and returns data
     context: ({ req }) => ({ req, pubsub })
 })
